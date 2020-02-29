@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UTILISER LE MECANISME DE COERCITION AVEC DES TYPES PRIMITIFS</title>
+    <script>
+        var fonctionRep = function (text){
+            var repNum = prompt(text);
+            while (!isNaN(repNum)){
+                repNum = prompt("YOU MUST input a number");
+            };
+            return repNum;
+        };
+        //PART 1
+        //alert(fonctionRep().length);
+        //PART 2
+        //alert(fonctionRep().substr(1,4));
+        //PART 3
+        var mots = fonctionRep().split(' ');
+        for (var m in mots) {
+            alert(mots[m]);
+        };
+
+
+    </script>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        Et maxime excepturi est corrupti libero nemo vero saepe aliquam, 
+        sit quod, aliquid quam consequatur fuga magni animi at facere amet? Laboriosam.</p>
+</body>
+</html>

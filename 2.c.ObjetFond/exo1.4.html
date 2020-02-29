@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UTILISER DES OBJETS FONDAMENTAUX DU LANGAGE </title>
+    <script>
+        var fonctionRep = function (text){
+            var repNum = prompt(text);
+            while (isNaN(repNum)){
+                repNum = prompt("YOU MUST input a number");
+            };
+            return parseFloat(repNum);
+        };
+        var arrSup = Math.ceil(fonctionRep());
+        var arrInf = Math.floor(fonctionRep());
+
+        alert('Arrondi Sup :' + arrSup + 'Arrondi Inf :'+ arrInf);
+
+    </script>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem quos ipsam provident voluptates 
+        aspernatur deserunt deleniti saepe tenetur, voluptas eos reprehenderit earum quas, asperiores ad. 
+        Officia velit pariatur excepturi enim.</p>
+</body>
+</html>

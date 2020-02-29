@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Feuille 2 d'EXOs du 03092019</title>
+    <script>
+        //EXO 1/11
+        // <p onclick="saisieF()">
+        var saisieF = function (){
+            var saiF = prompt("Saisie un truc:");
+            while ( null == saiF){
+                saiF = prompt("Veuillez saisir (boucle1):");
+            };
+            var saiS = prompt("Saisie un truc2:");
+            while (null == saiS ) {
+                saiS = prompt("Saisie un truc (boucle2)");
+                };
+            alert("Vous avez saisi : " + saiF + saiS);
+        };
+
+        // EXO 2/11
+        // Part 1
+        // <body onload="saisie()">
+        // var saisie = function(){
+        //     var rep = prompt("SAISIE");
+        //     alert(parseFloat(rep));
+        // };
+        // Part 2
+        // <body onload="saisie()">
+        // var saisie = function(){
+        //     var rep = prompt("SAISIE");
+        //     var repFloat = parseFloat(rep);
+        //     alert(isNaN(repFloat));
+        // };
+        // Part3
+        // <p onclick="saisie()">
+        // var saisie = function(){
+        //     var repNum = prompt("Saisir un nombre");
+        //     if (isNaN(repNum)){
+        //         alert("YOU MUST saisir un number !");
+        //     } else {
+        //         alert("Merci d'avoir saisi un number");
+        //     };
+        // };
+
+        // EXO 3/11
+        // <body onload="saisie()">
+        // var saisie = function(){
+        //     var repNum = prompt("Saisir un nombre");
+        //     while (isNaN(repNum)){
+        //         repNum = prompt("YOU MUST saisir un number !");
+        //     };
+        // };
+
+        // EXO 4/11
+        // <body onload="saisie()">
+        // var saisie = function(){
+        //     var repNum = prompt("Saisie un FIRST number");
+        //     while (isNaN(repNum)){
+        //         repNum = prompt("YOU MUST input a number");
+        //     };
+        //     var repNum2 = prompt("Saisie un SECOND number");
+        // while (isNaN(repNum2)){
+        //     repNum2 = prompt("YOU MUST input a number");
+        // };
+        //     alert(parseInt(repNum) + parseInt(repNum2));
+        // };
+
+        // EXO 5/11
+        // <body onload="twoTimeRep()" >
+        // var fonctionRep = function (text){
+        //     var repNum = prompt(text);
+        //     while (isNaN(repNum)){
+        //         repNum = prompt("YOU MUST input a number");
+        //     };
+        //     return  parseFloat(repNum);
+        // };
+
+        // Fonction appelé une fois appelant la prémière 2 fois
+        // var twoTimeRep = function (){
+        //     var firstN = fonctionRep('INPUTNUMBER1');
+        //     var scondN = fonctionRep('INPUTNUMBER2');
+        //     alert(firstN + scondN);
+        // };
+
+        // EXO 6/11
+        // var tab = [];
+        // var saisie4 = function () {
+        //     for (var index = 0; index < 4; index++) {
+        //     var repNum = prompt("Saisir");
+        //     while (isNaN(repNum)){
+        //         repNum = prompt("YOU MUST input a number");
+        //     };
+        //     tab[index] = repNum;
+        //     };
+        //     for (const num in tab) {
+        //         alert(tab[num]);
+        //     }
+        // };
+
+
+    </script>
+</head>
+<body onload="saisie()" >
+    <h2>TITLE</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Voluptatum commodi dolores explicabo ullam officia ad architecto velit vel non,
+        delectus ut itaque aliquid! Illo ipsam laborum nesciunt ducimus expedita eius.</p>
+        <br><br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae in eligendi natus dicta alias,
+        ab earum quidem eveniet commodi, ducimus totam nobis ipsum fugit quaerat debitis doloremque sit eos minima.</p>
+</body>
+</html>

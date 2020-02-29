@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Savoir utiliser le BOM (Browser Object Model) et le DOM
+        (Document Object Model)
+        </title>
+    
+        <script>
+
+            //PART 1
+            var userA = window.navigator.userAgent;
+            var appN = window.navigator.appName;
+
+            alert('User Agent :' + userA + '\n Nom de App :' + appN);
+
+            //FIREFOX OUTPUT
+            // User Agent :Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0
+            // Nom de App :Netscape
+            //CHROME
+            // "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36"
+            //EDGE
+            // "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.18362"
+
+            //Address
+            //https://fr.wikipedia.org/wiki/Chromium
+
+            var edgeNav = userA.indexOf("Edge");
+            var fireNav = userA.indexOf("Firefox");
+            var chromeNav = userA.indexOf("Chrome/77");
+
+
+            if (edgeNav === 116 ) {
+                alert('So Lame !');
+                open('https://www.firefox.com');
+            } else if (fireNav == 66 ) {
+                alert('You are in FIREFOX !');
+            } else if ( chromeNav == 81 ){
+                alert('Spy on me !');
+                open('https://fr.wikipedia.org/wiki/Chromium');
+            } else {
+                alert('Freed from desire !');
+            }
+
+
+        </script>
+</head>
+<body>
+    <h4>Savoir utiliser le BOM (Browser Object Model) et le DOM
+        (Document Object Model)
+        </h4>
+</body>
+</html>

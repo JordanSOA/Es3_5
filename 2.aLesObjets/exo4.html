@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object EXO 4/8</title>
+    <script>
+        var teacher = {
+            age: 23,
+            attendance: false,
+            lname: "Madoff",
+            fname: "Bernard",
+            taughtSubject: "Economics"
+        };
+
+        var classRoom = {
+            "num" : 3,
+            "speciality" : "light",
+            "teacher" : teacher,
+            "students" : []
+        };
+
+        var firstStudent = {
+            age: 66,
+            attendance: true,
+            lname: "Cahuzac",
+            fname: "Jerome"
+        };
+        var scondStudent = {
+            age: 25,
+            attendance: false,
+            lname: "Karpelès",
+            fname: "Mark"
+        };
+        var thirdStudent = {
+            age: 40,
+            attendance: false,
+            lname: "Stanford",
+            fname: "Allen"
+        };
+
+        scondStudent.attendance = true ;
+
+        // var affichStudInClass = function () {
+        //     for( var compt = 0; classRoom.students[compt]; compt++) {
+        //         var attend = classRoom.students[compt].attendance ? "present" : "absent";
+        //         alert("I am "+ classRoom.students[compt].fname + " "+ classRoom.students[compt].lname+ " and I am "+ attend); 
+        //     }
+        // }
+        var affichStudPresentInClass = function () {
+            for( var compt = 0; classRoom.students[compt]; compt++) {
+                var attend = classRoom.students[compt].attendance;
+                if (attend){
+                    alert("I am "+ classRoom.students[compt].fname + " "+ classRoom.students[compt].lname+ " and I am right here !"); 
+                } else {
+                    alert("I am "+ classRoom.students[compt].fname + " "+ classRoom.students[compt].lname+ " and I am gone with your money !");
+                };
+            }
+        }
+
+
+
+
+        classRoom.students[0] = firstStudent;
+        classRoom.students[1] = scondStudent;
+        classRoom.students[2] = thirdStudent;
+        
+        // affichStudInClass();
+        affichStudPresentInClass();
+
+    </script>
+</head>
+<body>
+    <h2>Titre</h2>
+</body>
+</html>

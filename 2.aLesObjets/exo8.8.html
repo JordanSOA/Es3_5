@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EXO 8/8</title>
+    <script>
+        //P1
+        var house = {
+            adress: "Beverly Hills, LA",
+            room: {}
+        }
+        //P2
+        var room = {
+            bed: "matelas",
+            house: this.house,
+            wtsMyAd: function (){
+                alert(this.house.adress);
+            }
+        }
+        //P3
+        house.room = room;
+        //P4
+        //alert(house.room.bed);
+        //P5
+        alert(house.room.wtsMyAd());
+    </script>
+</head>
+<body>
+    <h2>Créer un objet littéral contenant une référence circulaire</h2>
+</body>
+</html>

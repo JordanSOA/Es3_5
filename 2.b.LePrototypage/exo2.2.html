@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objets basés sur fonc Constructeur dont un servira prototype </title>
+</head>
+<script>
+    //PART1
+    function Mammouth(){
+        this.age = 25,
+        this.weight = 30,
+        this.species = "Mammals",
+        this.gotFur = true,
+        this.gender = "female",
+        this.trumpet = function(){
+            alert("DUMBO FOR LIFE");
+        }
+    };
+    //PART2
+    function Elephants(){
+        this.weight = 15,
+        this.species = "Mammal",
+        this.gotFur = false,
+        this.eatPeanuts = function(){
+            alert("Peanuts FOR LIFE ");
+        }
+    }
+    Elephants.prototype = new Mammouth;
+    //PART3
+    var dumbo = new Elephants();
+    var dumbish = new Elephants();
+
+    dumbo.__proto__.trumpet();
+    dumbish.eatPeanuts();
+
+</script>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde aut, minus magni quo ab ipsum voluptate. Odit,
+        cumque quam fugiat repellendus aspernatur reiciendis, deleniti natus voluptates sint deserunt, at delectus.
+    </p>
+</body>
+
+</html>

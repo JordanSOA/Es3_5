@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EXO 3 /23 </title>
+    <script>
+
+        //PART 1
+        //alert(window.document.title);
+
+        //PART 2
+        var changeTitle = function(){
+            window.document.title = 'Ceci est un nouveau titre';
+        };
+
+        //PART 3
+
+        var checkAndChangeTitle = function(){
+            if (window.document.title === 'Ceci est un nouveau titre') {
+                window.document.title =  'EXO 3/23';
+            } else {
+                window.document.title = 'Ceci est un nouveau titre';
+            }
+        };
+
+    </script>
+</head>
+<body>
+    <p onclick="changeTitle()">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Voluptate asperiores quibusdam aperiam veniam possimus officia aut tempora, 
+        ipsam molestiae fugit itaque optio reiciendis repudiandae amet, quod quis a sunt praesentium!</p>
+        <br><br>
+    <p onclick="checkAndChangeTitle()">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Dolores minima veniam reiciendis sit quia distinctio in rem iure, sequi sapiente consectetur error.
+        Quam minima rerum voluptatum officia ratione nam cum?</p>
+</body>
+</html>

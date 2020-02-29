@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EXERCICE 9/11 : IMPLEMENTER UN TRI-BULLE</title>
+    <script>
+        var triBulle = function () {
+            let tabToSort = arguments;
+            let deplace;
+            do {
+                deplace = false;
+                for (let index = 0; index < tabToSort.length - 1; index++) {
+                    if (tabToSort[index] > tabToSort[index + 1]) {
+                        var tmp = tabToSort[index];
+                        tabToSort[index] = tabToSort[index + 1];
+                        tabToSort[index + 1] = tmp;
+                        deplace = true;
+                    };
+
+                };
+            } while (deplace);
+            return tabToSort;
+        };
+
+        var newTab = triBulle(10,24,8,33,2,4,9);
+        console.log(newTab);
+
+    </script>
+</head>
+
+<body>
+    <h1>Mon nouveau document</h1>
+    <p>Premier paragraphe Start</p>
+    <p>Deuxième paragraphe Stop</p>
+    <noscript>
+        <p>Veuillez activer JavaScript - Sami Radi - VirtuoWorks® - tous droits réservés©</p>
+    </noscript>
+</body>
+
+</html>

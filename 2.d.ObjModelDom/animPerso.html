@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        };
+    </style>
+    <script>
+        window.onload = function () {
+            var maskDiv = document.getElementById("container");
+            maskDiv.style.position = "absolute";
+            maskDiv.style.overflow = "hidden";
+            maskDiv.style.height = "26px";
+            maskDiv.style.width = "26px";
+            maskDiv.style.left = "15px";
+            maskDiv.style.bottom = "500px";
+            maskDiv.style.backgroundColor = "white";
+
+            var imgTag = window.document.getElementById('contenu');
+            imgTag.style.position = "absolute";
+            imgTag.style.left = "";
+            imgTag.style.bottom = "2px";
+
+
+            var frame1 = {
+                left : "",
+                bottom: "2px"
+            };
+            var frame2 = {
+                left : "-32px",
+                bottom: "2px"
+            };
+            var frame3 = {
+                left : "-55px",
+                bottom: "2px"
+            };
+            var frame4 = {
+                left : "-114px",
+                bottom: "2px"
+            };
+            var frame5 = {
+                left : "-164px",
+                bottom: "2px"
+            };
+            var frame6 = {
+                left : "-224px",
+                bottom: "2px"
+            };
+
+            var frame7 = {
+                left: "0px",
+                bottom : "-81px"
+            }
+
+            var frame8 = {
+                left: "-28px",
+                bottom : "-81px"
+            }
+
+            var frame9 = {
+                left: "-54px",
+                bottom : "-81px"
+            }
+            var frame10 = {
+                left: "-142px",
+                bottom : "-81px"
+            }
+
+            var frame11 = {
+                left: "-26px",
+                bottom: "-26px"
+            };
+
+            var frame12 = {
+                left: "-58px",
+                bottom: "-26px"
+            };
+            var frame13 = {
+                left: "-88px",
+                bottom: "-26px"
+            };
+
+            var frame14 = {
+                left: "-144px",
+                bottom: "-26px"
+            };
+
+            var framesVersD = [frame1, frame2, frame3, frame4, frame5, frame6];
+            var framesVersH = [frame7, frame8, frame9, frame10];
+            var framesVersB = [frame11, frame12, frame13, frame14];
+
+
+
+            var cpt = 0;
+
+            window.onkeydown = function (event) {
+
+                var code = event.keyCode;
+
+                switch(code) {
+                    case 32 :
+                        console.log('shoot');
+                    break;
+                    case 37:
+                    maskDiv.style.left =  (parseFloat(maskDiv.style.left) - 5) + "px";
+                        maskDiv.style.height = "26px";
+                        maskDiv.style.width = "26px";
+                        imgTag.style.transform = "scaleX(-1)";
+                        if ( cpt  < framesVersD.length - 1 ) {
+                            imgTag.style.left = framesVersD[cpt].left;
+                            imgTag.style.bottom = framesVersD[cpt].bottom;
+                            cpt++;
+                        } else {
+                            cpt = 0;
+                            imgTag.style.left = framesVersD[cpt].left;
+                            imgTag.style.bottom = framesVersD[cpt].bottom;
+                            console.log('reset');
+                        };
+                        console.log('gauche');
+                    break;
+                    case 38:
+                        maskDiv.style.bottom =  parseFloat(maskDiv.style.bottom) + 5 + "px";
+                        maskDiv.style.height = "26px";
+                        maskDiv.style.width = "26px";
+                        if ( cpt  < framesVersH.length - 1 ) {
+                            imgTag.style.left = framesVersH[cpt].left;
+                            imgTag.style.bottom = framesVersH[cpt].bottom;
+                            cpt++;
+                        } else {
+                            cpt = 0;
+                            imgTag.style.left = framesVersH[cpt].left;
+                            imgTag.style.bottom = framesVersH[cpt].bottom;
+                            console.log('reset');
+                        };
+                        console.log('haut');
+                    break;
+                    case 39:
+                        maskDiv.style.left =  parseFloat(maskDiv.style.left) + 5 + "px";
+                        maskDiv.style.height = "26px";
+                        maskDiv.style.width = "26px";
+                        imgTag.style.transform = "scaleX(1)";
+                        if ( cpt  < framesVersD.length - 1 ) {
+                            imgTag.style.left = framesVersD[cpt].left;
+                            imgTag.style.bottom = framesVersD[cpt].bottom;
+                            cpt++;
+                        } else {
+                            cpt = 0;
+                            imgTag.style.left = framesVersD[cpt].left;
+                            imgTag.style.bottom = framesVersD[cpt].bottom;
+                            console.log('reset');
+                        };
+                        console.log('droite');
+                    break;
+                    case 40:
+                        maskDiv.style.bottom =  parseFloat(maskDiv.style.bottom) - 5 + "px";
+                        maskDiv.style.height = "26px";
+                        maskDiv.style.width = "26px";
+                        if ( cpt  < framesVersB.length - 1 ) {
+                            imgTag.style.left = framesVersB[cpt].left;
+                            imgTag.style.bottom = framesVersB[cpt].bottom;
+                            cpt++;
+                        } else {
+                            cpt = 0;
+                            imgTag.style.left = framesVersB[cpt].left;
+                            imgTag.style.bottom = framesVersB[cpt].bottom;
+                            console.log('reset');
+                        };
+                        console.log('bas');
+                    break;
+                    case 74:
+                        maskDiv.style.bottom =  parseFloat(maskDiv.style.bottom) + 25 + "px";
+                        console.log('jump');
+                    default: 
+                        console.log(code);
+                        //alert("PRESS ONLY : UP - DOWN - LEFT - RIGHT OR SPACE");
+                    break;
+
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+        <h1>Play !</h1>
+        <div>
+            <div id="container" class="masque">
+                <img id="contenu" class="sprite" src="C:\Users\Workspace\Desktop\Exo JS\DoneWork\newpers.png"/>
+            </div>
+        </div>
+        <noscript>
+            <p>Veuillez activer JavaScript - Sami Radi - VirtuoWorks® - tous droits réservés©</p>
+        </noscript>
+</body>
+</html>

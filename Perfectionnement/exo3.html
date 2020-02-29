@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exercice 3/11: Ecrire un algorithme qui utilise le mot-clé for</title>
+    <script type="text/javascript">
+        var saisie = function () {
+            var repNum = prompt("Saisir un nombre");
+            let numRes = 0;
+            while (!isNaN(repNum)) {
+                numRes += parseFloat(repNum);
+                repNum = prompt(`Rentrez un nombre pour l'additionner à ${numRes}:`);
+            };
+            return calculMoyenne(numRes);
+        };
+        var calculMoyenne = function () {
+            let num = 0;
+            for (let index = 0; arguments[index]; index++) {
+                num += + arguments[index];
+            }
+            return console.log(num / 2);
+        };
+    </script>
+</head>
+
+<body onload="saisie()">
+    <h1>Mon nouveau document</h1>
+    <p>Premier paragraphe</p>
+    <p>Deuxième paragraphe</p>
+    <noscript>
+        <p>Veuillez activer JavaScript - Sami Radi - VirtuoWorks® - tous droits réservés©</p>
+    </noscript>
+</body>
+
+</html>

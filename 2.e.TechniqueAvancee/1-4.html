@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EXERCICE 1/4:  CHAINAGE D’EXECUTION</title>
+    <script>
+        var $ = {
+            firstM : function(){
+                return this.secM();
+            },
+            secM: function(){
+                return this.thirdM();
+            },
+            thirdM: function(){
+                return this;
+            }
+        };
+
+        var obj2 = $.firstM();
+        console.log(obj2);
+    </script>
+</head>
+<body>
+    <h2>EXERCICE 1/4:  CHAINAGE D’EXECUTION</h2>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Créer plusieurs objets basés sur objet littéral servant de prototype</title>
+</head>
+<script>
+    //Part1
+    var conPlane = {
+        model: "ab256",
+        cap: 420,
+        price: 20,
+        passenger : [],
+        tank: 100,
+        color: ["white"]
+    }
+    //Part2
+    var airFPlane = Object.create(conPlane, {company : {value: "AirFrance", writable: true, enumerable: true, configurable: true}});
+    //Part3
+    var britAirPlane = Object.create(conPlane, {company : {value: "BritishAirways", writable: true, enumerable: true, configurable: true}});
+</script>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde aut, minus magni quo ab ipsum voluptate. Odit, cumque quam fugiat repellendus aspernatur reiciendis, deleniti natus voluptates sint deserunt, at delectus.
+    </p>
+</body>
+</html>

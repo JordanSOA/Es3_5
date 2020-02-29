@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EXO 6/8</title>
+    <script>
+        var robot = {
+            numSerie: 1,
+            numMod: 655,
+            uName: "Bobot",
+            color: "blue",
+            mat: "steel",
+            durG: "23/09/2019",
+            numSal: 0,
+            bonjour: function(){
+                this.numSal++;
+                alert("Hello human !\nIm "+ this.numMod + this.numSerie);
+            }
+        };
+
+        //robot.bonjour();
+    </script>
+</head>
+<body>
+    <h3 onclick="robot.bonjour()">Créer un et manipuler un objet dont les méthodes modifient intrinsèquement ses autres propriétés</h3>
+    
+</body>
+</html>

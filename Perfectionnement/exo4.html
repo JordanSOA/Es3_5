@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exercice 4/11 : Demander l’exécution de fonctions de façon asynchrone</title>
+    <script type="text/javascript">
+        //Part 1 & 2
+        var funcAsync = function (mode) {
+            if ("time" == mode) {
+                let timeOut = setTimeout(function () {
+                    prompt('ok');
+                }, 3000);
+            } else if ("inter" == mode) {
+                let interval = setInterval(function () {
+                    let stopInput = prompt("Entrez 'stop' pour.. vous voyez quoi.");
+                    if ("stop" == stopInput) {
+                        clearInterval(interval);
+                    };
+                }, 5000);
+            }
+        };
+        var mode = prompt("Entrez 'time' ou 'inter'");
+        funcAsync(mode);
+    //Part 3
+    // let interval;
+    // var startInter = function(){
+    //     interval = setInterval(function () {
+    //                 prompt('ok');
+    //             }, 1000);
+    //     return interval;        
+    // };
+    // var stopInter = function(){
+    //     clearInterval(interval);
+    // };
+
+    </script>
+</head>
+
+<body>
+    <h1>Mon nouveau document</h1>
+    <p onclick="startInter()">Premier paragraphe Start</p>
+    <p onclick="stopInter()">Deuxième paragraphe Stop</p>
+    <noscript>
+        <p>Veuillez activer JavaScript - Sami Radi - VirtuoWorks® - tous droits réservés©</p>
+    </noscript>
+</body>
+
+</html>

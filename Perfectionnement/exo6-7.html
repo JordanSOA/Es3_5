@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exo 6 et 7</title>
+    <script>
+        var resp = prompt('Entrez le numero de jour de la semaine lequel vous etes né:');
+
+        switch (parseInt(resp)) {
+            case 1:
+                alert('Lundi');
+                break;
+            case 2:
+            case 3:
+            case 4:
+                alert('Mardi ou Mercredi ou Jeudi');
+                break;
+            case 5:
+                alert('Vendredi');
+                break;
+            case 6:
+            case 7:
+                alert('Samedi ou Dimanche');
+            default:
+                alert("Ce n'est pas un chiffre entre 1 et 7");
+                break;
+        }
+    </script>
+</head>
+<body>
+    <h1>JourSemaine</h1>
+</body>
+</html>

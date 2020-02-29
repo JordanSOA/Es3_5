@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object EXO 3/8 PART 1</title>
+    <script>
+        var foncPre = {
+            foncComparatif: function (argOne) {
+                var chif = argOne;
+                var truc;
+                truc = chif >= 23;
+                if (truc) {
+                    alert("Entrée");
+                } else {
+                    alert("Sortie");
+                };
+            },
+            makeDial: function () {
+                confirm("Ceci est un choix");
+            },
+            makeDial2: function () {
+                var rep = confirm("Ceci est un choix");
+                alert(rep);
+            },
+            validate: function () {
+                var rep = confirm("Voulez-vous continuez ?");
+                if (rep) {
+                    alert("Vous avez cliqué sur OK");
+                };
+            },
+            validOrNot: function () {
+                var rep = confirm("Voulez-vous continuer ?");
+                if (rep) {
+                    alert("Vous avez cliqué sur OK");
+                } else {
+                    alert("Vous avez choisi d'annuler");
+                };
+            }
+        } 
+
+        foncPre.foncComparatif(25);
+        foncPre.makeDial();
+        foncPre.makeDial2();
+        foncPre.validate();
+        foncPre.validOrNot();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

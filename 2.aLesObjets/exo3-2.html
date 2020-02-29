@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object EXO 3/8 PART 2</title>
+    <script>
+        var multiMethod = {
+            retourneNumParCent: function(num){
+                alert(num);
+                return num * 100;
+            },
+            retourneTextPlusHello: function(txt){
+                alert(txt);
+                return txt + "hello !";
+            },
+            retourneIndiModif: function(tab){
+                alert(tab[0]);
+                tab[1] = tab[2];
+                return tab;
+            },
+            retourneObj: function(a){
+                a.prop4 = a.prop1 + a.prop2 + a.prop3 + a.prop4 + a.prop5;
+                return a;
+            }
+        }
+        //First
+        // var retourFonc = multiMethod.retourneNumParCent(2);
+        // alert(retourFonc);
+        // SECOND
+        // var retourFonc2 = multiMethod.retourneTextPlusHello("Hola   ");
+        // alert(retourFonc2);
+        // Third
+        // var retourFonc3 = multiMethod.retourneIndiModif([1,2,8]);
+        // alert(retourFonc3[1]);
+        //Fourth
+        // var retourFonc4 = multiMethod.retourneObj({prop1:1,prop2:2,prop3:3,prop4:4,prop5:5});
+        // alert(retourFonc4);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

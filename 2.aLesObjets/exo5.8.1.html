@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EXO 5/8 </title>
+    <script>
+        //Part1
+        function Robot(numSerie, couleur){
+            this.numSerie = numSerie;
+            this.numMod = 0;
+            this.name = name;
+            this.couleur = couleur;
+            this.material = "wood";
+            this.guar = "no guarantee";
+        };
+
+        var r1 = new Robot(1, "grey");
+        r1.numMod = 23;
+        var r2 = new Robot(2, "blue");
+        r2.numMod = 24;
+        var r3 = new Robot(3, "red");
+        r3.numMod = 23;
+        var r4 = new Robot(4, "yellow");
+        r4.numMod = 23;
+        var r5 = new Robot(5, "white");
+        r5.numMod = 23;
+        var r6 = new Robot(7, "black");
+        r6.numMod = 28;
+        var r7 = new Robot(6, "green");
+        r7.numMod = 28;
+        var r8 = new Robot(8, "brown");
+        r8.numMod = 28;
+        var r9 = new Robot(9, "orange");
+        r9.numMod = 23;
+        var r10 = new Robot(10, "purple");
+        r10.numMod = 18;
+        var r11 = new Robot(11, "transparent");
+        r11.numMod = 18;
+        var r12= new Robot(12, "rainbow");
+        r12.numMod = 18;
+        
+        var robMag = [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12];
+
+        var nameRobot = function(){
+            var compt = 0;
+            for ( compt; robMag[compt]; compt++) {
+                robMag[compt].name = ""+ robMag[compt].numMod + robMag[compt].numSerie +""+compt;
+                alert(robMag[compt].name);
+            };
+        };
+
+        nameRobot();
+
+
+    </script>
+</head>
+<body>
+    <h3>Créer et manipuler une multitude d’objets à l’aide d’une fonction constructeur</h3>
+    
+</body>
+</html>

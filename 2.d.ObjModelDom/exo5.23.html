@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EXO 5/23</title>
+    <script>
+        var affichById = function () {
+            console.log(window.document.getElementById('parag'));
+        }
+        
+        var changeById = function () {
+            var text = window.document.getElementById('parag2');
+            text.innerHTML = 'Ce texte est écrit dans cette balise par mon script';
+        }
+    </script>
+</head>
+
+<body onload="affichById()">
+
+    <h2 onclick="changeById()">TITRE </h2>
+    <p id="parag">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Animi ut praesentium natus ad. A veniam, tempora quis quisquam ullam
+        id ratione dicta, dolorem, quibusdam doloribus omnis? Amet aliquid consectetur fuga?</p>
+
+    <p id="parag2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Modi voluptatem temporibus, esse mollitia velit facere illum. Sit illum reiciendis cupiditate delectus esse sint
+        libero optio,
+        autem quae aut perspiciatis laboriosam.</p>
+
+</body>
+
+</html>

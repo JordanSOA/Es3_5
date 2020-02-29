@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EXO 7/8 </title>
+    <script>
+        var monObjet = {
+            e: function () {
+                alert(this.t);
+            },
+            r: true,
+            t: "Ceci est un texte dans un objet"
+        };
+
+        var monAutreObjet = {
+            e: [function () {
+                alert("Vous êtes ici !");
+            }, true],
+            r: false,
+            t: function () {
+                this.y = {
+                    e: function () {
+                        alert("Ou suis je ? Qui suis je ?");
+                    }
+                };
+                alert("Desormais ma propriété y contient un objet");
+            }
+        };
+        //P2
+        //alert(monAutreObjet.r);
+        //P3
+        //monAutreObjet.e[0]();
+        // P4 et P5
+        // monAutreObjet.y = monObjet;
+        //P6
+        // monAutreObjet.y.e();
+
+    </script>
+</head>
+<body>
+    <h2>Manipuler des objets en utilisant la console</h2>
+</body>
+
+</html>

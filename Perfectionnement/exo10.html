@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EXERCICE 10/11 : ECRIRE DES CONDITIONS BASEES SUR DES CALCULS DE RESTES DE DIVISIONS ENTIERES</title>
+    <script>
+        var isBissextile = function (year) {
+            let numCalc4 = (0 == (year % 4));
+            let numCalc100 = (0 == (year % 100));
+            let cas2 = (0 == (year % 400));
+            let cas1 = (numCalc4 && (numCalc100 === false));
+            cas1 || cas2 ? console.log("Bissextile") : console.log('Non Bissextile');
+        };
+
+        isBissextile(1900);
+        isBissextile(1904);
+        isBissextile(2000);
+        isBissextile(2003);
+    </script>
+</head>
+
+<body>
+    <h1>Mon nouveau document</h1>
+    <p>Premier paragraphe Start</p>
+    <p>Deuxième paragraphe Stop</p>
+    <noscript>
+        <p>Veuillez activer JavaScript - Sami Radi - VirtuoWorks® - tous droits réservés©</p>
+    </noscript>
+</body>
+
+</html>

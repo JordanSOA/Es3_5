@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exercice 1/11: Optimiser un algorithme en utilisant le mécanisme des closures</title>
+    <script type="text/javascript">
+        var createSentence = function() {
+            var mots = [8, "je  me  lève", 13, "je  déjeune", 23, "je  vais dormir"];
+            return function makeS() {
+                for (let index = 0; index < mots.length; index++) {
+                    var phrase = "Il est " + mots[0] + ", " + mots[1] + ". Il est " + mots[2] + ", " + mots[3] + ". Il est " + mots[4] + ", " + mots[5] + ".";
+                    return phrase;
+                }
+            }
+        }
+        var fonc = createSentence();
+        console.log(fonc());
+    </script>
+</head>
+
+<body onclick="createSentence()">
+    <h1>Mon nouveau document</h1>
+    <p>Premier paragraphe</p>
+    <p>Deuxième paragraphe</p>
+    <noscript>
+        <p>Veuillez activer JavaScript - Sami Radi - VirtuoWorks® - tous droits réservés©</p>
+    </noscript>
+</body>
+
+</html>
